@@ -1,0 +1,37 @@
+{
+    "actorSpecification": 1,
+    "name": "instagram-email-scraper-sss",
+    "title": "Project Puppeteer Crawler JavaScript",
+    "description": "Crawlee and Puppeteer project in JavaScript.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "js-crawlee-puppeteer-chrome"
+    },
+    "input": "./input_schema.json",
+    "dockerfile": "./Dockerfile",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "views": {
+                "overview": {
+                    "title": "Instagram Email Scraping Overview",
+                    "description": "Displays the scraped Instagram emails, links.",
+                    "transformation": {
+                        "fields": ["email", "link", "keyword"]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "email": { "label": "Email Address" },
+                            "link": {
+                                "label": "Link to Email Source",
+                                "format": "url"
+                            },
+                            "keyword": { "label": "Keyword" }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

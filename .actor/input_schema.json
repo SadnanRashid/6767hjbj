@@ -1,0 +1,57 @@
+{
+    "title": "youtube email scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Keyword",
+            "type": "string",
+            "description": "Keyword to search for in the Pinterest profile/posts. It can be a Location, job title, company name, etc or combined.",
+            "sectionCaption": "Keywords",
+            "editor": "textfield",
+            "default": "marketing"
+        },
+        "pagesToScrape": {
+            "title": "Maximum Emails to Scrape",
+            "type": "integer",
+            "description": "The number of emails to scrape. The scraper will stop after scraping this amount of emails.",
+            "sectionCaption": "Settings",
+            "default": 20,
+            "minimum": 1
+        },
+        "scrapeGmail": {
+            "title": "Scrape @gmail.com?",
+            "type": "boolean",
+            "description": "Whether to scrape emails with @gmail.com domain",
+            "default": true
+        },
+        "scrapeYahoo": {
+            "title": "Scrape @yahoo.com?",
+            "type": "boolean",
+            "description": "Whether to scrape emails with @yahoo.com domain",
+            "default": true
+        },
+        "scrapeOutlook": {
+            "title": "Scrape @outlook.com?",
+            "type": "boolean",
+            "description": "Whether to scrape emails with @outlook.com domain",
+            "default": true
+        },
+        "scrapeCustom": {
+            "title": "Custom email domains to scrape (Without '@' symbol)",
+            "type": "array",
+            "description": "Custom email domains to scrape. Without the '@' symbol",
+
+            "editor": "stringList",
+            "placeholderValue": "example.com",
+            "uniqueItems": true
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration. For best results use proxy",
+            "type": "object",
+            "description": "Proxy settings for the scraper",
+            "editor": "proxy",
+            "sectionCaption": "Proxy"
+        }
+    }
+}
